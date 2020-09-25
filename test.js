@@ -1,8 +1,4 @@
-let data = "hello World!"
-let splt = data.split(" ")
+function steps(n) {
 
-let str="";
-splt.map(ele=>{
-  str= str+" "+ele[0].toUpperCase()+ele.slice(1)
-})
-console.log(str.slice(1));
+}
+steps(4)
