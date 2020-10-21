@@ -86,15 +86,30 @@ class LinkedList {
         let counter = 0;
         let node = this.head;
         while(node){
-            if(counter == pos){
-                return node.next;
+            if(counter === pos+1){
+                return node;
             }
-            counter++;
-            node = node.next; 
-            
+            counter = counter+1;
+            node = node.next;  
         }
-
         return null;
+    }
+
+    removeAt(pos){
+      if (!this.head) {
+          return ;
+      }
+    //   if (pos == 0) {
+    //       this.head = this.head;
+    //   }
+      
+      let prevNode = this.getAt(pos-1);
+      if(!prevNode || !prevNode.next){
+          return ;
+      }
+    
+      prevNode.next = prevNode.next.next;
+
     }
 
 }
